@@ -1,0 +1,28 @@
+#content {
+    margin: 2rem;
+}
+
+#layout_home {
+    background-color: transparent;
+}
+
+#stories_title {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    background-color: white;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    border-radius: 0%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: #03001e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #fdeff9, #ec38bc, #7303c0, #03001e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #fdeff9, #ec38bc, #7303c0, #03001e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
