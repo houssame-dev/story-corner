@@ -5,13 +5,15 @@
      post their stories, like other users' stories, and modify or delete their own stories. 
 </p>
 
-<h3> steps to run the app: </h3>
+<h2> steps to run the app: </h2>
 
 You have to insatll mongoDb and node.js
 
-1- clone the app 
-2- cd to Story Corner 
-3- run npm install 
-4- cd to client 5- run npm start
-6- cd to server 7- run npm start
+1- clone the app <br/>
+2- cd to Story Corner <br/>
+3- run npm install <br/>
+4- cd to client <br/>
+5- run npm start <br/>
+6- cd to server <br/> 
+7- run npm start <br/>
 Enjoy !
