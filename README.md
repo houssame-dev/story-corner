@@ -5,7 +5,7 @@
      post their stories, like other users' stories, and modify or delete their own stories. 
 </p>
 
-<h2> steps to run the app: </h2>
+<h2> Steps to run the app: </h2>
 
 You have to insatll mongoDb and node.js
 
@@ -18,5 +18,5 @@ You have to insatll mongoDb and node.js
 8) cd to server (terminal 2)  <br/> 
 9) run npm install (terminal 2)  <br/> 
 10) run npm start (terminal 2) <br/>
-11) go to http://localhost:3000/ in your browser <br/><br/>
+11) go to http://localhost:3000/ <br/><br/>
 Enjoy !
