@@ -9,11 +9,14 @@
 
 You have to insatll mongoDb and node.js
 
-1- clone the app <br/>
-2- cd to Story Corner <br/>
-3- run npm install <br/>
-4- cd to client <br/>
-5- run npm start <br/>
-6- cd to server <br/> 
-7- run npm start <br/>
+1) clone the app <br/>
+2) cd to Story Corner <br/>
+4) split terminal (one for server-side and one for client-side) <br/>
+5) cd to client (terminal 1)  <br/>
+6) run npm install (terminal 1) <br/>
+7) run npm start (terminal 1) <br/>
+8) cd to server (terminal 2)  <br/> 
+9) run npm install (terminal 2)  <br/> 
+10) run npm start (terminal 2) <br/>
+11) go to http://localhost:3000/ in your browser <br/><br/>
 Enjoy !
