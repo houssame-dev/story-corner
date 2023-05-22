@@ -33,7 +33,7 @@ function PageFooter() {
             <br /><br />
             <Space>
                 <a href="https://www.facebook.com/houssame.errjem" target="_blank" rel="noopener noreferrer"><FacebookFilled style={{ fontSize: '30px', color: "white" }} /></a>
-                <a href="https://www.instagram.com/houssame_er/" target="_blank" rel="noopener noreferrer"><InstagramFilled style={{ fontSize: '30px', color: "white" }} /></a>
+                <a href="https://www.instagram.com/houssame_errjem/" target="_blank" rel="noopener noreferrer"><InstagramFilled style={{ fontSize: '30px', color: "white" }} /></a>
                 <a href="https://twitter.com/errjem2" target="_blank" rel="noopener noreferrer"><TwitterSquareFilled style={{ fontSize: '30px', color: "white" }} /></a>
                 <a href="https://www.linkedin.com/in/houssame-errjem-a89822208/" target="_blank" rel="noopener noreferrer"><LinkedinFilled style={{ fontSize: '30px', color: "white" }} /></a>
                 <a href="https://www.behance.net/houssameerrjem" target="_blank" rel="noopener noreferrer"><BehanceSquareFilled style={{ fontSize: '30px', color: "white" }} /></a>
