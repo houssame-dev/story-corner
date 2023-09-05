@@ -43,7 +43,7 @@ Check out the live demo of "Story Corner" [here](https://story-corner.netlify.ap
 - **Styled Components**: Creating styled and responsive components.
 - **Axios**: Making HTTP requests to the server.
 - **JWT**: Handling user authentication through JSON Web Tokens.
-- **Deployment**: Deployed on [Platform](https://app.netlify.com/sites/story-corner/overview)
+- **Deployment**: Deployed on [Netlify](https://app.netlify.com/sites/story-corner/overview)
 
 ## Installation
 
@@ -103,6 +103,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 If you have any questions, suggestions, or would like to get in touch, feel free to reach out to me:
 
 - **Email**: errjem2@gmail.com
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/houssameerrjem/) <br/>
+- **LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/houssameerrjem/) <br/>
 I hope you enjoy exploring "Story Corner" as much as I enjoyed building it!
    
