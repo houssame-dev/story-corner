@@ -31,7 +31,7 @@ function PageFooter() {
             <br /><br />
             <Space>            
                 <a href="https://twitter.com/errjem2" target="_blank" rel="noopener noreferrer"><<TwitterOutlined /> style={{ fontSize: '30px', color: "white" }} /></a>
-                <a href="https://www.linkedin.com/in/houssameerrjem-a89822208/" target="_blank" rel="noopener noreferrer"><LinkedinFilled style={{ fontSize: '30px', color: "white" }} /></a>
+                <a href="https://www.linkedin.com/in/errjem/" target="_blank" rel="noopener noreferrer"><LinkedinFilled style={{ fontSize: '30px', color: "white" }} /></a>
                 <a href="https://github.com/Errjem" target="_blank" rel="noopener noreferrer"><GithubFilled style={{ fontSize: '30px', color: "white" }} /></a>
             </Space>
         </Footer>
