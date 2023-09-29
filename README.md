@@ -102,7 +102,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 If you have any questions, suggestions, or would like to get in touch, feel free to reach out to me:
 
-- **Email**: errjem2@gmail.com
-- **LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/houssameerrjem/) <br/>
+- **Email**: houssame.dev@gmail.com
+- **LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/houssame-dev/) <br/>
 I hope you enjoy exploring "Story Corner" as much as I enjoyed building it!
    
