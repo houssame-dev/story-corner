@@ -4,7 +4,6 @@ import { Layout } from 'antd';
 import Home from "./components/Home";
 import AppBar from "./components/AppBar";
 import AuthForm from "./components/AuthForm";
-import PageFooter from './components/PageFooter';
 import "./styles.css"
 
 
@@ -18,7 +17,6 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/authform" element={<AuthForm />} />
         </Routes>
-        <PageFooter />
       </Layout>
     </BrowserRouter>
 
