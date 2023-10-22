@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({ BASE_URL: "https://story-corner.onrender.com/" });
+const api = axios.create({ PORT: "https://story-corner.onrender.com/" });
 
 api.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
