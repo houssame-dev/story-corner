@@ -18,7 +18,7 @@ app.use("/user", userRoutes);
 
 
 const MONGO_URI = process.env.MONGO_URI;
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5001;
 
 mongoose.connect(MONGO_URI).catch((error) => {
   console.log(error);
