@@ -57,7 +57,7 @@ function Story({ story, setSelectedId }) {
       <Meta
       className="meta"
         avatar={
-          <Avatar style={{ backgroundColor: "#7303c0", color: "white" }}>
+          <Avatar style={{ backgroundColor: "#4A00E0", color: "white" }}>
             {story.username.charAt(0)}
           </Avatar>
         }

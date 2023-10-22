@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import StoryList from '../StoryList'
-import StoryForm from '../StoryForm'
-import "./styles.css"
-import { Layout } from 'antd'
-import { useDispatch } from 'react-redux';
-import { getStories } from '../../actions/stories'
-
-const { Content } = Layout;
+import React, { useEffect, useState } from "react";
+import StoryList from "../StoryList";
+import StoryForm from "../StoryForm";
+import "./styles.css";
+import { useDispatch } from "react-redux";
+import { getStories } from "../../actions/stories";
 
 const Home = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -17,16 +14,14 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <Layout id='layout_home'>
-      <Content id='content'>
+    <div id="home">
+      <div id="content">
         <StoryForm selectedId={selectedId} setSelectedId={setSelectedId} />
-
-        <h1 id='stories_title'>Stories</h1>
-
+        <h1 id="stories_title">Stories</h1>
         <StoryList setSelectedId={setSelectedId} />
-      </Content>
-    </Layout>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

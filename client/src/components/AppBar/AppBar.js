@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { LOGOUT } from "../../constants/actionTypes";
 import decode from "jwt-decode";
 import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
+import { TiSocialInstagram } from "react-icons/ti";
 
 function AppBar() {
   const dispatch = useDispatch();
@@ -30,34 +31,38 @@ function AppBar() {
   }, [location, user?.token, logout]);
 
   return (
-    <Navbar id="header">
+    <Navbar id="header" fixed="top">
       <Container fluid>
         <Row id="row">
-          <Col lg={6} id="col_title">
+          <Col lg={2} md={2} sm={2} xs={2} id="col_title">
             <Link to="/">
-              <span id="title">S-C</span>
+              <TiSocialInstagram id="title" />
             </Link>
           </Col>
 
-          <Col lg={6} id="col_user">
+          <Col lg={10} md={10} sm={10} xs={10} id="col_user">
             {!user ? (
               <Link to="/authform">
                 <Button id="login">
-                  <BiLogInCircle />
-                  <span id="user_login">Log In</span>
+                  <span>
+                    <BiLogInCircle />
+                  </span>
+                  <span id="user_login">Log in</span>
                 </Button>
               </Link>
             ) : (
               <div id="user_info">
-                <Badge id="avatar" alt="username">
+                <Badge id="avatar" alt="username" bg="black">
                   {user?.result?.username?.charAt(0)?.toUpperCase()}
                 </Badge>
                 <span id="user_title" level={4}>
                   {user?.result?.username?.toUpperCase()}
                 </span>
-                <Button onClick={logout}>
-                  <BiLogOutCircle />
-                  <span id="user_logout">Log Out</span>
+                <Button onClick={logout} id="logout">
+                  <span>
+                    <BiLogOutCircle />
+                  </span>
+                  <span id="user_logout">Log out</span>
                 </Button>
               </div>
             )}

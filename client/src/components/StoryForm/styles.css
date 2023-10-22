@@ -1,61 +1,75 @@
 #formTitle {
-    color: white;
-    text-align: center;
-    margin-bottom: 3rem;
-    border-radius: 0%;
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Lucida Console", "Courier New", monospace;
-    background: #03001e;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #fdeff9, #ec38bc, #7303c0, #03001e);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #fdeff9, #ec38bc, #7303c0, #03001e);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+  color: #03001e;
+  text-align: center;
+  padding-block: 3rem;
+  margin-inline: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #formCard {
-    margin-bottom: 3rem;
-    width: auto;
-    max-width: 500px;
-    max-height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  margin-bottom: 3rem;
+  width: auto;
+  max-width: 700px;
+  max-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e5e5e5;
+  border-radius: 30px;
 }
 #form_card {
-    margin-bottom: 3rem;
-    width: auto;
-    max-width: 500px;
-    max-height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  text-align: center;
+  margin-bottom: 3rem;
+  width: auto;
+  max-width: 700px;
+  max-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #03001e;
+  border-radius: 20px;
+  background-color: #e5e5e5;
 }
 #form {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 300px;
-    font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .input-file input[type="file" i]::-webkit-file-upload-button {
-    color: transparent;
-    background-color: transparent;
-    cursor: pointer;
-    font-family: "Lucida Console", "Courier New", monospace;
-    height: 48px;
-    text-align: left;
-    text-transform: none;
-    user-select: none;
-    width: auto;
-    box-shadow: none;
-    border: none;
-    background-image: url("../../images/upload3.png");
-    background-repeat: no-repeat;
-    background-position: center;
+  color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 48px;
+  text-align: left;
+  text-transform: none;
+  user-select: none;
+  width: auto;
+  box-shadow: none;
+  border: none;
+  background-image: url("../../images/upload3.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+#formCard button {
+  background-color: #4a00e0;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-inline: auto;
+}
+
+#story_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

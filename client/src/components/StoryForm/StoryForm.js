@@ -1,15 +1,23 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Card, Form, Input, Typography, Button } from 'antd';
-import { PlusOutlined, CloseOutlined, TagOutlined, FormOutlined, SmileTwoTone, LoginOutlined } from '@ant-design/icons';
-import FileBase64 from 'react-file-base64';
-import './styles.css';
-import { createStory, updateStory } from '../../actions/stories';
-import { Link } from 'react-router-dom';
-const { Title } = Typography;
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Form, Input } from "antd";
+import FileBase64 from "react-file-base64";
+import "./styles.css";
+import { createStory, updateStory } from "../../actions/stories";
+import { Link } from "react-router-dom";
+import { Button, Card } from "react-bootstrap";
+import { BiLogInCircle } from "react-icons/bi";
+import {
+  AiOutlineClose,
+  AiOutlineForm,
+  AiOutlinePlus,
+  AiOutlineTag,
+} from "react-icons/ai";
 
 function StoryForm({ selectedId, setSelectedId }) {
-  const story = useSelector((state) => selectedId ? state.stories.find(story => story._id === selectedId) : null);
+  const story = useSelector((state) =>
+    selectedId ? state.stories.find((story) => story._id === selectedId) : null
+  );
   const dispatch = useDispatch();
   const [form] = Form.useForm();
 
@@ -18,10 +26,8 @@ function StoryForm({ selectedId, setSelectedId }) {
 
   const onSubmit = (formValues) => {
     selectedId
-      ?
-      dispatch(updateStory(selectedId, { ...formValues, username }))
-      :
-      dispatch(createStory({ ...formValues, username }));
+      ? dispatch(updateStory(selectedId, { ...formValues, username }))
+      : dispatch(createStory({ ...formValues, username }));
     reset();
   };
 
@@ -34,70 +40,70 @@ function StoryForm({ selectedId, setSelectedId }) {
   const reset = () => {
     form.resetFields();
     setSelectedId(null);
-  }
+  };
 
   if (!user) {
     return (
-      <Card id='form_card'>
-        <Title level={4}>
-          Welcome to Story Corner.
-          Please, you must first <Link to="/authform"> <LoginOutlined /> Login</Link>  {" "}
-          to be able to share stories <SmileTwoTone />  !
-        </Title>
+      <Card id="form_card">
+        <span level={4}>
+          <h1>Welcome to Story Corner.</h1> <hr />
+          <h3>
+            {" "}
+            <Link to="/authform">
+              {" "}
+              <BiLogInCircle /> Login
+            </Link>{" "}
+            to share stories !
+          </h3>
+        </span>
       </Card>
-      
-    )
+    );
   }
   return (
     <Card id="formCard">
-      <Title id="formTitle" level={4}>
+      <span id="formTitle" level={4}>
         {selectedId ? "Editing" : "Share"} a Story
-      </Title>
-      <Form
-        id='form'
-        form={form}
-        layout="horizontal"
-        onFinish={onSubmit}
-      >
-
-        <Form.Item
-          name="caption"
-          rules={[{ required: true }]}
-        >
-          <Input prefix={<FormOutlined />} placeholder='Caption' allowClear />
+      </span>
+      <Form id="form" form={form} layout="horizontal" onFinish={onSubmit}>
+        <Form.Item name="caption" rules={[{ required: true }]}>
+          <Input prefix={<AiOutlineForm />} placeholder="Caption" allowClear />
         </Form.Item>
 
         <Form.Item name="tags" rules={[{ required: true }]}>
-          <Input prefix={<TagOutlined />} placeholder='Tags' allowClear />
+          <Input prefix={<AiOutlineTag />} placeholder="Tags" allowClear />
         </Form.Item>
 
         <Form.Item name="image" rules={[{ required: true }]}>
           <div className="input-file">
-            <FileBase64 type="file" multiple={false} onDone={(e) => {
-              form.setFieldsValue({
-                image: e.base64,
-              });
-            }}
+            <FileBase64
+              type="file"
+              multiple={false}
+              onDone={(e) => {
+                form.setFieldsValue({
+                  image: e.base64,
+                });
+              }}
             />
           </div>
-
         </Form.Item>
 
-        <Form.Item >
-
-          <Button shape="round" style={{ fontFamily: 'Lucida Console, Courier New, monospace', maxWidth: 100 }} type="primary" block htmlType="submit">
-            <PlusOutlined /> <span style={{ fontWeight: 900 }}>Share</span>
-          </Button>
-
-          {!selectedId ? null :
-
-            <Button shape="round" style={{ fontFamily: 'Lucida Console, Courier New, monospace', maxWidth: 100, marginLeft: 10 }} danger type="primary" block htmlType="submit" onClick={reset}>
-              <CloseOutlined /> <span style={{ fontWeight: 900 }}>Cancel</span>
+        <Form.Item id="form_buttons">
+          <div id="story_buttons">
+            <Button type="submit">
+              <AiOutlinePlus /> Share
             </Button>
-          }
 
+            {!selectedId ? null : (
+              <Button
+                type="submit"
+                onClick={reset}
+                style={{ backgroundColor: "red" }}
+              >
+                <AiOutlineClose /> Cancel
+              </Button>
+            )}
+          </div>
         </Form.Item>
-
       </Form>
     </Card>
   );

@@ -1,11 +1,12 @@
 #card {
   margin-inline: auto;
   max-width: 500px;
+  border: none;
 }
 
 .meta {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-block: 1rem;
+  padding-block: 0.1rem;
 }
