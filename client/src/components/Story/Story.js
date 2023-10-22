@@ -55,7 +55,7 @@ function Story({ story, setSelectedId }) {
       }
     >
       <Meta
-      className="meta"
+        className="meta"
         avatar={
           <Avatar style={{ backgroundColor: "#4A00E0", color: "white" }}>
             {story.username.charAt(0)}
@@ -68,7 +68,7 @@ function Story({ story, setSelectedId }) {
           fontSize: "large",
         }}
       />
-      <hr/>
+      <hr />
       <Paragraph
         style={{
           textTransform: "capitalize",
