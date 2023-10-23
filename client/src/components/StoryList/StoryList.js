@@ -21,7 +21,7 @@ function StoryList({ setSelectedId }) {
             </Col>
           )
         })}
-      </Row>
+      </Row>  
     )
 }
 

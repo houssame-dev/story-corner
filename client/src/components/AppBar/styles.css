@@ -1,5 +1,6 @@
 #header {
-  background-color: #fca311;
+  background-color: black;
+  padding-block: 1rem;
 }
 
 #row {
@@ -10,14 +11,13 @@
   margin: 0;
 }
 
-#col_title {
+#col_logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-#col_title #logo {
-  color: #03001e;
+#col_logo #logo {
   width: 50px;
 }
 
@@ -35,7 +35,7 @@
 }
 
 #user_info #avatar {
-  color: #fca311;
+  color: black;
   border-radius: 50px;
   padding: 10px 12px;
   font-size: 15px;
@@ -43,15 +43,16 @@
 
 #user_info #user_title {
   font-weight: bold;
-  color: #03001e;
+  color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 #login {
-  background-color: #4a00e0;
-  color: #e5e5e5;
+  background-color: blue;
+  color: white;
   border-radius: 50px;
+  border: none;
   padding: 8px 15px;
   display: flex;
   justify-content: center;
@@ -63,9 +64,10 @@
 }
 
 #logout {
-  background-color: #4a00e0;
-  color: #e5e5e5;
+  background-color: blue;
+  color: white;
   border-radius: 50px;
+  border: none;
   padding: 8px 15px;
   display: flex;
   justify-content: center;

@@ -34,7 +34,7 @@ function AppBar() {
     <Navbar id="header" fixed="top">
       <Container fluid>
         <Row id="row">
-          <Col lg={2} md={2} sm={2} xs={2} id="col_title">
+          <Col lg={2} md={2} sm={2} xs={2} id="col_logo">
             <Link to="/">
               <img src={logo} alt="logo" id="logo"/>
             </Link>
@@ -52,7 +52,7 @@ function AppBar() {
               </Link>
             ) : (
               <div id="user_info">
-                <Badge id="avatar" alt="username" bg="black">
+                <Badge id="avatar" alt="username" bg="white">
                   {user?.result?.username?.charAt(0)?.toUpperCase()}
                 </Badge>
                 <span id="user_title" level={4}>

@@ -46,11 +46,9 @@ function StoryForm({ selectedId, setSelectedId }) {
     return (
       <Card id="form_card">
         <span level={4}>
-          <h1>Welcome to Story Corner.</h1> <hr />
+          <h1>Welcome to Story Corner.</h1> <br />
           <h3>
-            {" "}
             <Link to="/authform">
-              {" "}
               <BiLogInCircle /> Login
             </Link>{" "}
             to share stories !

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Card, Tooltip, Typography, Image, Avatar } from "antd";
+import { Card, Tooltip, Typography, Image } from "antd";
 import { EditOutlined, DeleteTwoTone, HeartTwoTone } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
 import { deleteStory, likeStory } from "../../actions/stories";
 import moment from "moment";
 import "./styles.css";
+import { Badge } from "react-bootstrap";
 
-const { Meta } = Card;
-const { Link, Paragraph, Text } = Typography;
+const { Paragraph, Text } = Typography;
 
 function Story({ story, setSelectedId }) {
   const dispatch = useDispatch();
@@ -43,74 +43,54 @@ function Story({ story, setSelectedId }) {
   ];
 
   return (
-    <Card
-      id="card"
-      cover={<Image src={story.image} />}
-      actions={
-        user?.result?._id === story?.userId
-          ? cardActions
-          : user?.result
-          ? cardActions.slice(0, 1)
-          : null
-      }
-    >
-      <Meta
-        className="meta"
-        avatar={
-          <Avatar style={{ backgroundColor: "#4A00E0", color: "white" }}>
-            {story.username.charAt(0)}
-          </Avatar>
+    <div className="text-white">
+      <Card
+        id="card"
+        cover={<Image src={story.image} />}
+        actions={
+          user?.result?._id === story?.userId
+            ? cardActions
+            : user?.result
+            ? cardActions.slice(0, 1)
+            : null
         }
-        title={story.username}
-        style={{
-          fontFamily: "Lucida Console, Courier New, monospace",
-          textTransform: "uppercase",
-          fontSize: "large",
-        }}
-      />
-      <hr />
-      <Paragraph
-        style={{
-          textTransform: "capitalize",
-          margin: 0,
-          fontFamily: "Lucida Console, Courier New, monospace",
-        }}
-        ellipsis={{
-          rows: 2,
-          expandable: true,
-          symbol: "more",
-          onExpand: () => {
-            setExpand(true);
-          },
-          onEllipsis: () => {
-            setExpand(false);
-          },
-        }}
       >
-        {story.caption}
-      </Paragraph>
-      {expand ? (
-        <Link
-          style={{
-            fontFamily: "Lucida Console, Courier New, monospace",
-            textTransform: "uppercase",
+        <div className="meta">
+          <Badge id="story_badge" bg="white">
+            {story.username.charAt(0)}
+          </Badge>
+          <span id="story_username">{story.username}</span>
+        </div>
+          <br />
+        <Paragraph
+          id="story_para"
+          ellipsis={{
+            rows: 2,
+            expandable: true,
+            symbol: "more",
+            onExpand: () => {
+              setExpand(true);
+            },
+            onEllipsis: () => {
+              setExpand(false);
+            },
           }}
-          href="#"
         >
-          {story.tags.split(" ").map((tag) => ` #${tag}`)}
-        </Link>
-      ) : null}
-      <br />
-      <br />
-      <Text
-        style={{
-          fontFamily: "Lucida Console, Courier New, monospace",
-          color: "secondary",
-        }}
-      >
-        {moment.utc(moment(story.postDate)).local().fromNow()}
-      </Text>
-    </Card>
+          {story.caption}
+        </Paragraph>
+        {expand ? (
+          <span id="story_hashtag">
+            {story.tags.split(" ").map((tag) => ` #${tag}`)}
+          </span>
+        ) : null}
+        <br />
+        <br />
+        <Text id="story_time">
+          {moment.utc(moment(story.postDate)).local().fromNow()}
+        </Text>
+      </Card>
+      <hr />
+    </div>
   );
 }
 
