@@ -96,23 +96,7 @@ export const likeStory = (id) => async (dispatch) => {
   try {
     const { data } = await api.likeStory(id);
     dispatch({ type: UPDATE_STORY, payload: data });
-
-    // Show a success message with SweetAlert2
-    Swal.fire({
-      title: "Success",
-      text: "Story liked successfully",
-      icon: "success",
-      showConfirmButton: false,
-      timer: 1500,
-    });
   } catch (error) {
     console.log(error.message);
-
-    // Show an error message with SweetAlert2
-    Swal.fire({
-      title: "Error",
-      text: "Failed to like the story",
-      icon: "error",
-    });
   }
 };
