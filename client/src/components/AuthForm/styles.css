@@ -1,7 +1,15 @@
 #auth {
-  padding: 8rem 1rem 0;
+  padding-inline: 1rem;
   background-color: black;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+#auth-div{
+  width: 100%;
 }
 
 #auth_form_title {
@@ -54,4 +62,13 @@
   background-color: transparent;
   border: none;
   color: blue;
+}
+
+#auth #copyright{
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 6rem;
+  padding-inline: 1rem;
 }

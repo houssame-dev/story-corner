@@ -1,8 +1,8 @@
 #home {
   background-color: black;
   padding-top: 8rem;
-  min-height: 100vh;
   padding-inline: 1rem;
+  min-height: 100vh;
 }
 
 #stories_title {

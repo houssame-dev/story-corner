@@ -5,6 +5,8 @@ import "./styles.css"
 import { useSelector } from 'react-redux'
 
 function StoryList({ setSelectedId }) {
+  const currentYear = new Date().getFullYear();
+  const authorName = "Houssame.";
   const stories = useSelector((state) => state.stories);
   console.log("stories", stories)
 
@@ -14,6 +16,7 @@ function StoryList({ setSelectedId }) {
     </div> :
     (
       <Row id='row'>
+        <>
         {stories.map((story, i) => {
           return (
             <Col id='col' key={i} span={24}>
@@ -21,6 +24,12 @@ function StoryList({ setSelectedId }) {
             </Col>
           )
         })}
+           <p id="copyright">
+          <span>
+            &copy; {currentYear} {authorName}
+          </span>
+        </p>
+        </>
       </Row>  
     )
 }
