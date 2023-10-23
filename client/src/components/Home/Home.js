@@ -13,6 +13,11 @@ const Home = () => {
     dispatch(getStories());
   }, [dispatch]);
 
+  window.history.pushState(null, document.title, window.location.href);
+  window.addEventListener('popstate', function(event) {
+    window.history.pushState(null, document.title, window.location.href);
+  });
+
   return (
     <div id="home">
       <div id="content">

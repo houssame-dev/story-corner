@@ -25,7 +25,7 @@
 #auth_form_card {
   width: auto;
   max-width: fit-content;
-  max-height: 500px;
+  max-height: fit-content;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
@@ -64,11 +64,22 @@
   color: blue;
 }
 
-#auth #copyright{
+#auth #copyright {
   color: white;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-inline: 1rem;
+  width: 100%;
+}
+
+#auth #copyright #social-icons a {
+  color: white;
+  text-decoration: none;
+  padding-right: 1rem;
+}
+
+#auth #copyright #social-icons a:hover {
+  color: blue;
 }

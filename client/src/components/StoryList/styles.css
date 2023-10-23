@@ -1,12 +1,24 @@
-#col{
-    margin-top: 3rem;
-    margin-bottom: 3rem;  
+#col {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
-#row #copyright{
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-bottom: 3rem;
-  }
+#row #copyright {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3rem;
+  padding-inline: 1rem;
+  width: 100%;
+}
+
+#row #copyright #social-icons a {
+  color: white;
+  text-decoration: none;
+  padding-right: 1rem;
+}
+
+#row #copyright #social-icons a:hover {
+  color: blue;
+}

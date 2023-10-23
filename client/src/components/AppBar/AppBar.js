@@ -30,12 +30,16 @@ function AppBar() {
     setUser(JSON.parse(localStorage.getItem("profile")));
   }, [location, user?.token, logout]);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  };
+
   return (
     <Navbar id="header" fixed="top">
       <Container fluid>
         <Row id="row">
           <Col lg={2} md={2} sm={2} xs={2} id="col_logo">
-            <Link to="/">
+            <Link to="/" onClick={scrollToTop} >
               <img src={logo} alt="logo" id="logo"/>
             </Link>
           </Col>

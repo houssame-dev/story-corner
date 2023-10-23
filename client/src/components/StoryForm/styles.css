@@ -14,7 +14,7 @@
   padding-inline: 1rem;
   width: auto;
   max-width: fit-content;
-  max-height: 500px;
+  max-height: fit-content;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
@@ -26,7 +26,7 @@
   margin-bottom: 3rem;
   width: auto;
   max-width: fit-content;
-  max-height: 500px;
+  max-height: fit-content;
   margin-left: auto;
   margin-right: auto;
   color: white;

@@ -12,9 +12,16 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login, signup } from "../../actions/authentication";
 import Button from "react-bootstrap/Button";
+import { FaXTwitter, FaGithub } from "react-icons/fa6";
+
+
 const { Title } = Typography;
 
 function AuthForm() {
+  window.history.pushState(null, document.title, window.location.href);
+  window.addEventListener('popstate', function(event) {
+    window.history.pushState(null, document.title, window.location.href);
+  });
   const currentYear = new Date().getFullYear();
   const authorName = "Houssame.";
   const navigate = useNavigate();
@@ -134,6 +141,23 @@ function AuthForm() {
           </Form>
         </Card>
         <p id="copyright">
+          <span id="social-icons">
+            <a
+              href="https://twitter.com/houssamedev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaXTwitter size={25} />{" "}
+            </a>
+            <a
+              href="https://github.com/houssame-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <FaGithub size={25} />
+            </a>
+          </span>
           <span>
             &copy; {currentYear} {authorName}
           </span>
