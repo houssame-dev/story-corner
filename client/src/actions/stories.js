@@ -28,7 +28,7 @@ export const createStory = (story) => async (dispatch) => {
       text: "Story created successfully",
       icon: "success",
       showConfirmButton: false,
-      timer: 1500,
+      timer: 3000,
     });
   } catch (error) {
     console.log(error.message);
@@ -53,7 +53,7 @@ export const updateStory = (id, story) => async (dispatch) => {
       text: "Story updated successfully",
       icon: "success",
       showConfirmButton: false,
-      timer: 1500,
+      timer: 3000,
     });
   } catch (error) {
     console.log(error.message);
@@ -78,7 +78,7 @@ export const deleteStory = (id, story) => async (dispatch) => {
       text: "Story deleted successfully",
       icon: "success",
       showConfirmButton: false,
-      timer: 1500,
+      timer: 3000,
     });
   } catch (error) {
     console.log(error.message);

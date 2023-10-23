@@ -16,7 +16,7 @@ const signup = (formValues, navigate) => async dispatch => {
       text: 'Your account was created successfully',
       icon: 'success',
       showConfirmButton: false,
-      timer: 1500,
+      timer: 3000,
     });
 
     navigate("/");
@@ -43,7 +43,7 @@ const login = (formValues, navigate) => async dispatch => {
       text: 'You have successfully logged in',
       icon: 'success',
       showConfirmButton: false,
-      timer: 1500,
+      timer: 3000,
     });
 
     navigate("/");
