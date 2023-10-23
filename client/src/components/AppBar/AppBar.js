@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { LOGOUT } from "../../constants/actionTypes";
 import decode from "jwt-decode";
 import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
-import { TiSocialInstagram } from "react-icons/ti";
+import logo from '../../images/logo.png'
 
 function AppBar() {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ function AppBar() {
         <Row id="row">
           <Col lg={2} md={2} sm={2} xs={2} id="col_title">
             <Link to="/">
-              <TiSocialInstagram id="title" />
+              <img src={logo} alt="logo" id="logo"/>
             </Link>
           </Col>
 

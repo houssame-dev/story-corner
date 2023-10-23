@@ -16,9 +16,9 @@
   align-items: center;
 }
 
-#col_title #title {
+#col_title #logo {
   color: #03001e;
-  font-size: 35px;
+  width: 50px;
 }
 
 #col_user {
