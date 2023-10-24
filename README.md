@@ -28,7 +28,7 @@ Welcome to "Story Corner," a MERN (MongoDB, Express, React, Node.js) web applica
 
 ## Demo
 
-Check out the live demo of "Story Corner" [here](https://story-corner.netlify.app/)
+Check out the live demo of "Story Corner" [here](https://storycorner.netlify.app/)
 
 ## Technologies
 
@@ -43,7 +43,7 @@ Check out the live demo of "Story Corner" [here](https://story-corner.netlify.ap
 - **Styled Components**: Creating styled and responsive components.
 - **Axios**: Making HTTP requests to the server.
 - **JWT**: Handling user authentication through JSON Web Tokens.
-- **Deployment**: Deployed on [Netlify](https://app.netlify.com/sites/story-corner/overview)
+- **Deployment**: Deployed on [Netlify](https://app.netlify.com/sites/storycorner/overview)
 
 ## Installation
 
