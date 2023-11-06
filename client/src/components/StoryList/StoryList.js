@@ -19,7 +19,7 @@ function StoryList({ setSelectedId }) {
           color: "white",
         }}
       >
-        Loading...
+        Loading Stories...
       </h4>
     </div>
   ) : (

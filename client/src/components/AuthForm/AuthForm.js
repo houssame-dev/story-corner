@@ -1,25 +1,19 @@
 import React, { useState } from "react";
 import { Form, Input, Typography, Card, Space } from "antd";
 import "./styles.css";
-import {
-  LockOutlined,
-  MailOutlined,
-  UserOutlined,
-  LoginOutlined,
-  SkinOutlined,
-} from "@ant-design/icons";
+import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login, signup } from "../../actions/authentication";
 import Button from "react-bootstrap/Button";
 import { FaXTwitter, FaGithub } from "react-icons/fa6";
-
+import { RiLoginCircleFill } from "react-icons/ri";
 
 const { Title } = Typography;
 
 function AuthForm() {
   window.history.pushState(null, document.title, window.location.href);
-  window.addEventListener('popstate', function(event) {
+  window.addEventListener("popstate", function (event) {
     window.history.pushState(null, document.title, window.location.href);
   });
   const currentYear = new Date().getFullYear();
@@ -28,12 +22,16 @@ function AuthForm() {
   const dispatch = useDispatch();
   const [form] = Form.useForm();
   const [isLogin, setIsLogin] = useState(true);
-  const onSubmit = (formValues) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const onSubmit = async (formValues) => {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
     if (isLogin) {
-      dispatch(login(formValues, navigate));
+      await dispatch(login(formValues, navigate));
     } else {
-      dispatch(signup(formValues, navigate));
+      await dispatch(signup(formValues, navigate));
     }
+    setIsSubmitting(false);
   };
   const switchMode = () => {
     setIsLogin((prevIsLogin) => !prevIsLogin);
@@ -117,23 +115,20 @@ function AuthForm() {
             )}
             <Form.Item>
               <Space>
-                <Button type="submit" id="log_or_join">
-                  {isLogin ? (
-                    <>
-                      <span>
-                        <LoginOutlined /> Log In
-                      </span>
-                    </>
-                  ) : (
-                    <>
-                      <span>
-                        <SkinOutlined /> Join
-                      </span>
-                    </>
-                  )}
+                <Button type="submit" id="log_or_join" disabled={isSubmitting}>
+                  <RiLoginCircleFill />
+                  {isSubmitting
+                    ? "Wait a moment !"
+                    : isLogin
+                    ? "Log In"
+                    : "Join"}
                 </Button>
-
-                <Button type="link" onClick={switchMode} id="rj">
+                <Button
+                  type="link"
+                  onClick={switchMode}
+                  id="rj"
+                  disabled={isSubmitting}
+                >
                   {isLogin ? "Register Now" : "Have an Account"}
                 </Button>
               </Space>
@@ -154,7 +149,6 @@ function AuthForm() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {" "}
               <FaGithub size={25} />
             </a>
           </span>

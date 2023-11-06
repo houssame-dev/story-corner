@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Form, Input } from "antd";
 import FileBase64 from "react-file-base64";
@@ -23,12 +23,24 @@ function StoryForm({ selectedId, setSelectedId }) {
 
   const user = JSON.parse(localStorage.getItem("profile"));
   const username = user?.result?.username;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const onSubmit = async (formValues) => {
+    if (isSubmitting) return;
 
-  const onSubmit = (formValues) => {
-    selectedId
-      ? dispatch(updateStory(selectedId, { ...formValues, username }))
-      : dispatch(createStory({ ...formValues, username }));
-    reset();
+    setIsSubmitting(true);
+
+    try {
+      if (selectedId) {
+        await dispatch(updateStory(selectedId, { ...formValues, username }));
+      } else {
+        await dispatch(createStory({ ...formValues, username }));
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+      reset();
+    }
   };
 
   useEffect(() => {
@@ -87,8 +99,8 @@ function StoryForm({ selectedId, setSelectedId }) {
 
         <Form.Item id="form_buttons">
           <div id="story_buttons">
-            <Button type="submit">
-              <AiOutlinePlus /> Share
+            <Button type="submit" disabled={isSubmitting}>
+              <AiOutlinePlus /> {isSubmitting ? "Sharing..." : "Share"}
             </Button>
 
             {!selectedId ? null : (

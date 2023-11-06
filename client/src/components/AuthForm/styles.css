@@ -56,6 +56,10 @@
   border-radius: 50px;
   border: none;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 #rj {
